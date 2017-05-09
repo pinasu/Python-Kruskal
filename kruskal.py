@@ -22,9 +22,7 @@ def create_graph():
         while s[i] != '\n':
             weight = s[i]
             i += 1
-        myelement = (nameF, [(nameS, weight)])  # Ecco il nostro errore: noi creavamo
-                                                # element=(nameF, (nameS, weight))
-                                                #anziche' la LISTA come secondo parametro
+        myelement = (nameF, [(nameS, weight)]) 
         graph.append(myelement)
 
         i += 1
@@ -113,7 +111,7 @@ def kruskal(graph):
 
 def main():
     mygraph = create_graph()
-    print "Grafo: \n", mygraph
-    print "\nGrafo minimo: \n", kruskal(mygraph)
+    print "Graph: \n", mygraph
+    print "\nMinimum graph: \n", kruskal(mygraph)
 
 main()
